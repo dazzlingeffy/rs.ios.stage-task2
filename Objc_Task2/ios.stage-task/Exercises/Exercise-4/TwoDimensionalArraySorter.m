@@ -6,7 +6,7 @@
     if (array.count == 0 || !array || ![array[0] isKindOfClass:NSArray.class]) {
         return @[];
     }
-    NSMutableArray *res;
+    NSMutableArray *res = [NSMutableArray array];
     NSMutableArray *nums = [NSMutableArray array];
     NSMutableArray *strings = [NSMutableArray array];
     for (int i = 0; i < array.count; i++) {
