@@ -29,7 +29,7 @@
         }
     }
     [res addObject:[nums copy]];
-    [res addObject:[strings copy]];
+    [res addObject:[[strings reverseObjectEnumerator] allObjects]];
 
     return [res copy];
 }
