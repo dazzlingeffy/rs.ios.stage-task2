@@ -51,20 +51,4 @@
     XCTAssertEqualObjects(resultArray, @[]);
 }
 
-- (void)test5 {
-    NSArray *inputArray = @[@[@"Ivan",@"Ben",@"Dmitrii"], @[@3,@2,@1], @[@"Valentin",@"Van"], @[@6,@4,@5]];
-    NSArray *restultArray = @[@[@1, @2, @3, @4, @5, @6], @[@"Ben", @"Dmitrii", @"Ivan",@"Valentin",@"Van"]];
-    BOOL flag = [[self.sorter twoDimensionalSort: inputArray] isEqualToArray: restultArray];
-    XCTAssertTrue(flag);
-}
-
-- (void)test6 {
-    //Input: [[4, 6, 2], [1, 5, 3], [“Ben”, “Alex”, “Cris”], [“Desmond”, “Evan”], [8, 2, 7, 9]]
-    NSArray *inputArray = @[@[@4,@6,@2], @[@1,@5,@3], @[@"Ben",@"Alex",@"Cris"], @[@"Desmond",@"Evan"], @[@8,@2,@7,@9]];
-    //Output: [[1, 2, 2, 3, 4, 5, 6, 7, 8, 9], [“Evan”, “Desmond”, “Cris”, “Ben”, “Alex”]]
-    NSArray *resultArray = @[@[@1,@2,@2,@3,@4,@5,@6,@7,@8,@9], @[@"Alex", @"Ben",@"Cris",@"Desmond",@"Evan"]];
-    BOOL flag = [[self.sorter twoDimensionalSort: inputArray] isEqualToArray: resultArray];
-    XCTAssertTrue(flag);
- }
-
 @end
